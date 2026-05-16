@@ -1,3 +1,31 @@
+# Environment
+.env
+.env.local
+*.env
+
+# Data — large scraped files
+data/raw/*.json
+data/raw/*.html
+data/processed/*.parquet
+# but keep small samples committed for reviewers:
+!data/raw/sample.json
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Vector DB
+chroma_db/
+*.sqlite3
+
+# Models cache
+.cache/
+models/
+
+# OS
+.DS_Store
+Thumbs.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
