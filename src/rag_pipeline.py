@@ -27,6 +27,7 @@ from typing import Optional
 from src.generator import GroqGenerator
 from src.retrievers.base import BaseRetriever
 from src.retrievers.naive import NaiveRetriever
+from src.retrievers.hybrid import HybridRetriever
 
 logging.basicConfig(
     level=logging.INFO,
@@ -115,11 +116,13 @@ class RAGPipeline:
 # ---------- Variant factory ----------
 
 def build_pipeline(variant: str = "naive") -> RAGPipeline:
-    """Construct a RAGPipeline for the requested variant. Naive is the only one implemented for now."""
+    """Construct a RAGPipeline for the requested variant."""
     generator = GroqGenerator()
     if variant == "naive":
         retriever = NaiveRetriever()
-    # Hybrid and Agentic land in Steps 10 and 11.
+    elif variant == "hybrid":
+        retriever = HybridRetriever()
+    # Agentic lands in Step 11.
     else:
         raise ValueError(f"Unknown variant: {variant!r}")
     return RAGPipeline(retriever=retriever, generator=generator)
@@ -159,7 +162,7 @@ def main():
 
     p_ask = sub.add_parser("ask", help="Ask a single question via the RAG pipeline")
     p_ask.add_argument("query", help="The practitioner question to answer")
-    p_ask.add_argument("--variant", default="naive", choices=["naive"],
+    p_ask.add_argument("--variant", default="naive", choices=["naive", "hybrid"],
                        help="Which retrieval variant to use (default: naive)")
     p_ask.add_argument("--top-k", type=int, default=3)
     p_ask.add_argument("--json", action="store_true",
