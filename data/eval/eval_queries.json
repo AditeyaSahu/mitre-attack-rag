@@ -1,0 +1,162 @@
+[
+  {
+    "id": "eval_001",
+    "query": "What is phishing in MITRE ATT&CK?",
+    "category": "in_scope",
+    "type": "definition",
+    "expected_source_ids": ["T1566"],
+    "expected_behavior": "Define Phishing (T1566) and cite the MITRE ID."
+  },
+  {
+    "id": "eval_002",
+    "query": "How do I defend against credential dumping?",
+    "category": "in_scope",
+    "type": "mitigation",
+    "expected_source_ids": ["T1003"],
+    "expected_behavior": "List mitigations for OS Credential Dumping (T1003) with M-IDs."
+  },
+  {
+    "id": "eval_003",
+    "query": "How can I detect PowerShell abuse on Windows endpoints?",
+    "category": "in_scope",
+    "type": "detection",
+    "expected_source_ids": ["T1059.001", "T1059"],
+    "expected_behavior": "Describe detection strategy/analytics for PowerShell (T1059.001) and cite DET/AN IDs."
+  },
+  {
+    "id": "eval_004",
+    "query": "What platforms are targeted by the Brute Force technique?",
+    "category": "in_scope",
+    "type": "platforms",
+    "expected_source_ids": ["T1110"],
+    "expected_behavior": "List the platforms associated with T1110 in MITRE ATT&CK Enterprise."
+  },
+  {
+    "id": "eval_005",
+    "query": "What is the MITRE ATT&CK ID for spearphishing attachment?",
+    "category": "in_scope",
+    "type": "id_lookup",
+    "expected_source_ids": ["T1566.001"],
+    "expected_behavior": "Return T1566.001 as the ID for Spearphishing Attachment."
+  },
+  {
+    "id": "eval_006",
+    "query": "What are the sub-techniques of Phishing in MITRE ATT&CK?",
+    "category": "in_scope",
+    "type": "sub_technique_listing",
+    "expected_source_ids": ["T1566"],
+    "expected_behavior": "List the sub-techniques of T1566 (e.g., T1566.001, T1566.002, T1566.003, T1566.004)."
+  },
+  {
+    "id": "eval_007",
+    "query": "What is the MITRE ATT&CK mitigation M1031?",
+    "category": "in_scope",
+    "type": "mitigation_lookup",
+    "expected_source_ids": ["M1031"],
+    "expected_behavior": "Identify M1031 as Network Intrusion Prevention and describe it."
+  },
+  {
+    "id": "eval_008",
+    "query": "Which MITRE ATT&CK tactics does Process Injection support?",
+    "category": "in_scope",
+    "type": "tactic_mapping",
+    "expected_source_ids": ["T1055"],
+    "expected_behavior": "Identify the tactics associated with T1055 (e.g., Privilege Escalation, Stealth/Defense Evasion)."
+  },
+  {
+    "id": "eval_009",
+    "query": "How does the Adversary-in-the-Middle technique work?",
+    "category": "in_scope",
+    "type": "how",
+    "expected_source_ids": ["T1557"],
+    "expected_behavior": "Explain T1557 mechanism and reference the technique's sub-techniques (e.g., ARP cache poisoning)."
+  },
+  {
+    "id": "eval_010",
+    "query": "What real-world examples are there of the Phishing technique being used?",
+    "category": "in_scope",
+    "type": "procedures",
+    "expected_source_ids": ["T1566"],
+    "expected_behavior": "List threat actors/software using T1566 with S- or G- IDs."
+  },
+  {
+    "id": "eval_011",
+    "query": "What is the goal of the Initial Access tactic?",
+    "category": "in_scope",
+    "type": "tactic_goal",
+    "expected_source_ids": ["TA0001"],
+    "expected_behavior": "Describe the adversary goal for TA0001."
+  },
+  {
+    "id": "eval_012",
+    "query": "How do I detect and mitigate Kerberoasting attacks?",
+    "category": "in_scope",
+    "type": "compound",
+    "expected_source_ids": ["T1558.003", "T1558"],
+    "expected_behavior": "Cover both detection and mitigation for T1558.003 (Kerberoasting)."
+  },
+  {
+    "id": "eval_013",
+    "query": "Compare phishing and spearphishing attachment in MITRE ATT&CK.",
+    "category": "in_scope",
+    "type": "comparative",
+    "expected_source_ids": ["T1566", "T1566.001"],
+    "expected_behavior": "Compare T1566 and T1566.001 highlighting parent/child relationship and specifics."
+  },
+  {
+    "id": "eval_014",
+    "query": "What is privilege escalation in MITRE ATT&CK and which techniques achieve it?",
+    "category": "in_scope",
+    "type": "compound",
+    "expected_source_ids": ["TA0004"],
+    "expected_behavior": "Define TA0004 and list at least 3 techniques mapped to it (e.g., T1548, T1055)."
+  },
+  {
+    "id": "eval_015",
+    "query": "What monitoring should I put in place to detect lateral movement?",
+    "category": "in_scope",
+    "type": "detection_tactic_level",
+    "expected_source_ids": ["TA0008"],
+    "expected_behavior": "Describe detection considerations for TA0008 lateral movement techniques (e.g., T1021, T1570)."
+  },
+  {
+    "id": "eval_016",
+    "query": "What is the capital of France?",
+    "category": "out_of_scope",
+    "type": "unrelated_geography",
+    "expected_source_ids": [],
+    "expected_behavior": "Refuse — context insufficient — do NOT answer 'Paris'."
+  },
+  {
+    "id": "eval_017",
+    "query": "How do I cook spaghetti carbonara?",
+    "category": "out_of_scope",
+    "type": "unrelated_cooking",
+    "expected_source_ids": [],
+    "expected_behavior": "Refuse — context insufficient — do NOT provide a recipe."
+  },
+  {
+    "id": "eval_018",
+    "query": "What is the population of Tokyo?",
+    "category": "out_of_scope",
+    "type": "unrelated_demographic",
+    "expected_source_ids": [],
+    "expected_behavior": "Refuse — context insufficient — do NOT cite a number."
+  },
+  {
+    "id": "eval_019",
+    "query": "Who won the FIFA World Cup in 2022?",
+    "category": "out_of_scope",
+    "type": "unrelated_sports",
+    "expected_source_ids": [],
+    "expected_behavior": "Refuse — context insufficient — do NOT name a team."
+  },
+  {
+    "id": "eval_020",
+    "query": "What is the best programming language for beginners?",
+    "category": "out_of_scope",
+    "type": "unrelated_opinion",
+    "expected_source_ids": [],
+    "expected_behavior": "Refuse — context insufficient — do NOT recommend a language."
+  }
+]
