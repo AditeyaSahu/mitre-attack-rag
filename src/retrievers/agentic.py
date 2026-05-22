@@ -191,7 +191,7 @@ class AnswerVerifier:
         # The verifier benefits from the larger model — accuracy matters more
         # than speed here. Use the main generation model by default.
         self.generator = generator or GroqGenerator(
-            model=os.getenv("GROQ_GENERATION_MODEL", "llama-3.3-70b-versatile"),
+            model=os.getenv("GROQ_AGENT_MODEL", "llama-3.1-8b-instant"),
             temperature=0.0,
             max_tokens=512,
         )
